@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Павел Томилин](https://up.htmlacademy.ru/htmlcss/28/user/1295561).
-* Наставник: `Неизвестно`.
+- Студент: [Павел Томилин](https://up.htmlacademy.ru/htmlcss/28/user/1295561).
+- Наставник: [Егор Глебов](https://htmlacademy.ru/profile/beast).
 
 ---
 
