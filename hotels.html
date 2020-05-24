@@ -27,20 +27,70 @@
     <!-- Main -->
     <main>
       <section>
-        <div>
-          <p>Инфраструктура:</p>
-          <!-- Здесь будут формы checkbox -->
-        </div>
-        <div>
-          <p>Тип жилья:</p>
-          <!-- Здесь будут формы checkbox -->
-        </div>
-        <div>
-          <p>Стоимость в сутки (Р):</p>
-          <!-- Здесь будут формы и ползунок -->
-        </div>
-
-        <a href="">Показать</a>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <label for="label-pool">
+              <input
+                type="checkbox"
+                name="pool"
+                id="label-pool"
+                checked
+              />бассейн
+            </label>
+            <label for="label-parking">
+              <input
+                type="checkbox"
+                name="parking"
+                id="label-parking"
+              />парковка
+            </label>
+            <label for="label-wifi">
+              <input type="checkbox" name="wifi" id="label-wifi" />wi-fi
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <label for="label-hotel">
+              <input
+                type="checkbox"
+                name="hotel"
+                id="label-hotel"
+                checked
+              />гостиница
+            </label>
+            <label for="label-motel">
+              <input
+                type="checkbox"
+                name="motel"
+                id="label-motel"
+                checked
+              />мотель
+            </label>
+            <label for="label-apartment">
+              <input
+                type="checkbox"
+                name="apartment"
+                id="label-apartment"
+                checked
+              />апартаменты
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <input
+              type="text"
+              name="startprice"
+              aria-label="Поле ввода начальной цены"
+            />
+            <input
+              type="text"
+              name="endprice"
+              aria-label="Поле ввода конечной цены"
+            />
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
         <h2>НАЙДЕНО:</h2>
