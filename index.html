@@ -7,26 +7,27 @@
   <body>
     <!-- Header -->
     <header>
-      <ul>
-        <li><a href=""></a>ИНФОРМАЦИЯ</li>
-        <li><a href=""></a>ФОТО И ВИДЕО</li>
-        <li><a href=""></a>КАРТА ШТАТА</li>
-        <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
-      </ul>
-      <a href="index.html"
-        ><img
-          src="img/logo-sedona.svg"
-          width="138"
-          height="70"
-          alt="Logo City of Sedona"
-      /></a>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href=""></a>ИНФОРМАЦИЯ</li>
+          <li><a href=""></a>ФОТО И ВИДЕО</li>
+          <li><a href=""></a>КАРТА ШТАТА</li>
+          <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
+        </ul>
+        <a href="index.html" aria-label="Главная страница"
+          ><img
+            src="img/logo-sedona.svg"
+            width="138"
+            height="70"
+            alt="Logo City of Sedona"
+        /></a>
+      </nav>
     </header>
     <!-- Main -->
     <main>
       <section>
         <div>
-        
+          <h1 class="visually-hidden">Sedona</h1>
         </div>
       </section>
       <section>
@@ -50,18 +51,20 @@
       </section>
       <ul>
         <li>
-        <h4>Жильё</h4>
-        <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p></li>
-   
+          <h4>Жильё</h4>
+          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        </li>
+
         <li>
-        <h4>Еда</h4>
-        
+          <h4>Еда</h4>
+
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
-      
+
         <li>
-        <h4>Сувениры</h4>
-        <p>Не только китайского, но и местного производства!!</p></li>
+          <h4>Сувениры</h4>
+          <p>Не только китайского, но и местного производства!!</p>
+        </li>
       </ul>
 
       <section>
@@ -105,15 +108,49 @@
       </section>
       <section>
         <h2>ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2>
-        <p>Дата заезда:</p>
-        <span>24 апреля 2017</span>
-        <p>Дата выезда:</p>
-        <span>4 июля 2017</span>
-        <p>Взрослые:</p>
-        <span>2</span>
-        <p>Дети:</p>
-        <span>0</span>
-        <button type="button">Найти</button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label for="label-date-in"
+            >Дата заезда:
+            <input
+              type="text"
+              name="date-in"
+              id="label-date-in"
+              placeholder="24 апреля 2017"
+              required
+            />
+          </label>
+          <label for="label-date-out"
+            >Дата выезда:
+            <input
+              type="text"
+              name="date-out"
+              id="label-date-out"
+              placeholder="4 июля 2017"
+              required
+            />
+          </label>
+          <label for="label-adults"
+            >Взрослые:
+            <input
+              type="number"
+              name="adults"
+              id="label-adults"
+              min="1"
+              value="1"
+            />
+          </label>
+          <label for="label-children"
+            >Дети:
+            <input
+              type="number"
+              name="children"
+              id="label-children"
+              min="0"
+              value="0"
+            />
+          </label>
+          <button type="submit">Найти</button>
+        </form>
       </section>
       <section>
         <img src="img/map.png" width="1199" height="594" alt="MapIMG" />
@@ -121,30 +158,52 @@
     </main>
     <!-- Footer -->
     <footer>
-      <p><a href="">#visitSEDONA</a>
-      ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a></p>
+      <p>
+        <a href="">#visitSEDONA</a> ТЕЛ:
+        <a href="tel:+74956660166">+7(495) 666-01-66</a>
+      </p>
 
       <ul>
         <li>
-          <a href="#"><img src="img/twitter.svg" width="17" height="17" alt="Twitter Icon"></a>
+          <a href="#" aria-label="Twitter"
+            ><img
+              src="img/twitter.svg"
+              width="17"
+              height="17"
+              alt="Twitter icon"
+          /></a>
         </li>
         <li>
-          <a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="FaceBook Icon"> </a>
+          <a href="#" aria-label="FaceBook"
+            ><img
+              src="img/fb-icon.svg"
+              width="12"
+              height="22"
+              alt="FaceBook icon"
+            />
+          </a>
         </li>
         <li>
-          <a href="#"><img src="img/youtube.svg" width="20" height="16" alt="YouTube Icon"> </a>
+          <a href="#" aria-label="YouTube"
+            ><img
+              src="img/youtube.svg"
+              width="20"
+              height="16"
+              alt="YouTube icon"
+            />
+          </a>
         </li>
       </ul>
 
-      
-        <a href="https://htmlacademy.ru/intensive/htmlcss"
-          ><img
-            src="img/logo-htmlacademy.svg"
-            width="115"
-            height="41"
-            alt="Logo HTML Academy"
-        /></a>
-      
+      <a
+        href="https://htmlacademy.ru/intensive/htmlcss"
+        aria-label="HTML Academy intensive htmlcss"
+        ><img
+          src="img/logo-htmlacademy.svg"
+          width="115"
+          height="41"
+          alt="Logo html academy"
+      /></a>
     </footer>
   </body>
 </html>
