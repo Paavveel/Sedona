@@ -6,6 +6,8 @@
   --basic-blue: #81b3d2;
   --basic-brown: #766357;
   --basic-bggrey: #f2f2f2;
+  --basic-othergrey: #e5e5e5;
+  --basic-otherbrown: #666666;
 
   --special-blue: rgb(114, 197, 248);
   --special-brown: #a38775;
@@ -336,7 +338,7 @@ img {
 }
 
 .filter input[type="text"] {
-  border: 2px solid #ffffff;
+  border: 2px solid var(--basic-white);
   border-radius: 2px;
 }
 
@@ -351,7 +353,7 @@ img {
 /* Filters-caption */
 
 .filters-caption {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--basic-othergrey);
 }
 
 .filters-caption h2,
@@ -400,7 +402,7 @@ img {
 /* Filters result */
 
 .filters-result {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--basic-othergrey);
 }
 
 .filters-result h3 {
@@ -439,5 +441,5 @@ img {
 
 .hotel-rating {
   background-color: var(--basic-bggrey);
-  color: #666666;
+  color: var(--basic-otherbrown);
 }
