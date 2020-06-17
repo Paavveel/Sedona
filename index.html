@@ -65,16 +65,22 @@
       </section>
       <ul class="benefits-list">
         <li class="benefits-item">
-          <h4>Жильё</h4>
-          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          <h4 class="stay">Жильё</h4>
+          <p class="pstay">
+            Рекомендуем пожить в настоящем мотеле, всё как в кино!
+          </p>
         </li>
         <li class="benefits-item">
-          <h4>Еда</h4>
-          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <h4 class="eat">Еда</h4>
+          <p class="peat">
+            Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+          </p>
         </li>
         <li class="benefits-item">
-          <h4>Сувениры</h4>
-          <p>Не только китайского, но и местного производства!</p>
+          <h4 class="merch">Сувениры</h4>
+          <p class="pmerch">
+            Не только китайского, но и местного производства!
+          </p>
         </li>
       </ul>
       <section class="second-description">
@@ -106,7 +112,7 @@
         <div class="main-description-item">
           <h3>Мало туристов</h3>
           <span>— №5 —</span>
-          <p>большинство едет в гранд каньон и толпится там</p>
+          <p class="item-p">большинство едет в гранд каньон и толпится там</p>
         </div>
       </section>
       <section class="targetmap">
@@ -129,51 +135,151 @@
               method="post"
             >
               <p>
-                <label for="label-date-in"
+                <label class="label-date-in" for="label-date-in"
                   >Дата заезда:
                   <input
-                    class="search-form-icon"
                     type="text"
                     name="date-in"
                     id="label-date-in"
                     placeholder="24 апреля 2017"
                     required
-                  />
+                  /><a href="" class="calendar-link-in" aria-label="Кнопка"
+                    >открыть календарь заезда<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="22"
+                      viewBox="0 0 21 22"
+                    >
+                      <path
+                        d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"
+                        fill="#A9A9A9"
+                      />
+                      <path
+                        d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"
+                        fill="#A9A9A9"
+                      /></svg
+                  ></a>
                 </label>
               </p>
               <p>
-                <label for="label-date-out"
+                <label class="label-date-out" for="label-date-out"
                   >Дата выезда:
                   <input
-                    class="search-form-icon"
                     type="text"
                     name="date-out"
                     id="label-date-out"
                     placeholder="4 июля 2017"
-                    required
-                  />
-                </label>
+                    required /><a
+                    href=""
+                    class="calendar-link-out"
+                    aria-label="Кнопка"
+                    >открыть календарь выезда<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="22"
+                      viewBox="0 0 21 22"
+                    >
+                      <path
+                        d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"
+                        fill="#A9A9A9"
+                      />
+                      <path
+                        d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"
+                        fill="#A9A9A9"
+                      /></svg></a
+                ></label>
               </p>
               <p>
-                <label for="label-adults"
+                <label class="label-adults" for="label-adults"
                   >Взрослые:
-                  <input
+                  <a
+                    class="label-button adults-minus"
+                    href=""
+                    aria-label="Кнопка"
+                    >Взрослые минус<svg
+                      class="svg-minus"
+                      width="12"
+                      height="3"
+                      viewBox="0 0 12 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="12" height="3" fill="#A9A9A9" />
+                    </svg> </a
+                  ><input
+                    class="label-adults--number"
                     type="number"
                     name="adults"
                     id="label-adults"
                     min="1"
-                    value="1"
-                  />
+                    value="2"
+                  /><a
+                    class="label-button adults-plus"
+                    href=""
+                    aria-label="Кнопка"
+                    >Взрослые плюс
+                    <svg
+                      class="svg-plus"
+                      width="11"
+                      height="11"
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                        fill="#A9A9A9"
+                      />
+                    </svg>
+                  </a>
                 </label>
-                <label for="label-children"
+                <label class="label-children" for="label-children"
                   >Дети:
-                  <input
+                  <a
+                    class="label-button children-minus"
+                    href=""
+                    aria-label="Кнопка"
+                    >Дети плюс
+                    <svg
+                      class="svg-minus"
+                      width="12"
+                      height="3"
+                      viewBox="0 0 12 3"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="12" height="3" fill="#A9A9A9" />
+                    </svg> </a
+                  ><input
+                    class="label-children--number"
                     type="number"
                     name="children"
                     id="label-children"
                     min="0"
                     value="0"
-                  />
+                  /><a
+                    class="label-button children-plus"
+                    href=""
+                    aria-label="Кнопка"
+                    >Дети плюс
+                    <svg
+                      class="svg-plus"
+                      width="11"
+                      height="11"
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                        fill="#A9A9A9"
+                      />
+                    </svg>
+                  </a>
                 </label>
               </p>
               <button class="button" type="submit" aria-label="Кнопка">
@@ -187,7 +293,7 @@
     <!-- Footer -->
     <footer class="main-footer">
       <div class="main-footer-left">
-        <a href="#" aria-label="Переход">#visitSEDONA</a>
+        <a class="visit" href="#" aria-label="Переход">#visitSEDONA</a>
         <p>
           ТЕЛ:
           <a href="tel:+74956660166" aria-label="Телефон для связи"
@@ -196,13 +302,14 @@
         </p>
       </div>
       <div class="footer-social">
-        <a class="footer-social-item soc-icon-tw" href="#">Twitter</a>
-        <a class="footer-social-item soc-icon-fb" href="#">FaceBook</a>
-        <a class="footer-social-item soc-icon-yt" href="#">YouTube</a>
+        <a class="footer-social-item soc-icon-tw" href="#">Twitter</a
+        ><a class="footer-social-item soc-icon-fb" href="#">FaceBook</a
+        ><a class="footer-social-item soc-icon-yt" href="#">YouTube</a>
       </div>
       <div class="main-footer-right">
         <span>Website by</span
         ><a
+          class="logohtml"
           href="https://htmlacademy.ru/intensive/htmlcss"
           aria-label="Переход на страницу "
           >HTML Academy intensive htmlcss<svg
