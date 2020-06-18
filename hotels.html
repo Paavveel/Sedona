@@ -47,76 +47,100 @@
           <fieldset>
             <legend>Инфраструктура:</legend>
             <p>
-              <input
-                class="filter-input-checkbox"
-                type="checkbox"
-                name="pool"
-                id="label-pool"
-                checked
-              /><label for="label-pool">бассейн</label>
+              <label class="check"
+                ><input
+                  class="filter-input-checkbox visually-hidden"
+                  type="checkbox"
+                  name="pool"
+                  checked
+                /><span class="check__box"></span>бассейн</label
+              >
             </p>
             <p>
-              <input
-                class="filter-input-checkbox"
-                type="checkbox"
-                name="parking"
-                id="label-parking"
-              /><label for="label-parking">парковка</label>
+              <label class="check"
+                ><input
+                  class="filter-input-checkbox visually-hidden"
+                  type="checkbox"
+                  name="parking"
+                /><span class="check__box"></span>парковка</label
+              >
             </p>
 
             <p>
-              <input
-                class="filter-input-checkbox"
-                type="checkbox"
-                name="wifi"
-                id="label-wifi"
-              /><label for="label-wifi">wi-fi</label>
+              <label class="check"
+                ><input
+                  class="filter-input-checkbox visually-hidden"
+                  type="checkbox"
+                  name="wifi"
+                /><span class="check__box"></span>wi-fi</label
+              >
             </p>
           </fieldset>
           <fieldset>
             <legend>Тип жилья:</legend>
             <p>
-              <input
-                class="filter-input-checkbox"
-                type="checkbox"
-                name="hotel"
-                id="label-hotel"
-                checked
-              /><label for="label-hotel">гостиница</label>
+              <label class="check-house-type"
+                ><input
+                  class="filter-input-checkbox visually-hidden"
+                  type="checkbox"
+                  name="hotel"
+                  checked
+                /><span class="check__box check__box-ml"></span>гостиница</label
+              >
             </p>
 
             <p>
-              <input
-                class="filter-input-checkbox"
-                type="checkbox"
-                name="motel"
-                id="label-motel"
-                checked
-              /><label for="label-motel">мотель</label>
+              <label class="check-house-type"
+                ><input
+                  class="filter-input-checkbox visually-hidden"
+                  type="checkbox"
+                  name="motel"
+                  checked
+                /><span class="check__box check__box-ml"></span>мотель</label
+              >
             </p>
 
             <p>
-              <input
-                class="filter-input-checkbox"
-                type="checkbox"
-                name="apartment"
-                id="label-apartment"
-                checked
-              /><label for="label-apartment">апартаменты</label>
+              <label class="check-house-type"
+                ><input
+                  class="filter-input-checkbox visually-hidden"
+                  type="checkbox"
+                  name="apartment"
+                  checked
+                /><span class="check__box check__box-ml"></span
+                >апартаменты</label
+              >
             </p>
           </fieldset>
           <fieldset>
             <legend class="priceperday">Стоимость в сутки (Р):</legend>
-            <input
-              type="text"
-              name="startprice"
-              aria-label="Поле ввода начальной цены"
-            />
-            <input
-              type="text"
-              name="endprice"
-              aria-label="Поле ввода конечной цены"
-            />
+            <div class="priceperday-inputbox">
+              <span>от</span>
+              <input
+                type="number"
+                name="startprice"
+                aria-label="Поле ввода начальной цены"
+                placeholder="от"
+                value="0"
+              />
+              <span>до</span>
+              <input
+                type="number"
+                name="endprice"
+                aria-label="Поле ввода конечной цены"
+                placeholder="до"
+                value="3000"
+              />
+            </div>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+            </div>
             <button
               class="filter-button"
               type="submit"

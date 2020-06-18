@@ -8,6 +8,7 @@
   --basic-bggrey: #f2f2f2;
   --basic-othergrey: #e5e5e5;
   --basic-otherbrown: #666666;
+  --basic-greybgsite: #888888;
 
   --special-filter: #cacaca;
   --special-blue: #669ec0;
@@ -15,6 +16,9 @@
   --special-brown: #604e43;
   --special-otherbrown: #503e33;
   --input-hover: #ebebeb;
+  --toogle-grey: #ababab;
+  --toogle-boxshadow: rgba(171, 171, 171, 0.3);
+  --scale-whiteopacity: rgba(255, 255, 255, 0.3);
 }
 
 *,
@@ -33,6 +37,7 @@ body {
   font-weight: normal;
   color: var(--basic-black);
   text-transform: uppercase;
+  background-color: var(--greybgsite);
 }
 
 a {
@@ -757,7 +762,7 @@ img {
 
 .filter {
   display: grid;
-  grid-template-columns: 265px 475px 1fr;
+  grid-template-columns: 255px 484px 1fr;
 }
 
 .filter fieldset {
@@ -780,23 +785,115 @@ img {
 .filter p {
   padding: 0;
   margin: 0;
-  padding-bottom: 23px;
+  padding-bottom: 25px;
 }
 
-.filter-input-checkbox + label {
+.check {
   color: var(--basic-white);
-  padding-left: 15px;
+  padding-left: 39px;
 }
 
-.filter-input-checkbox:hover + label,
-.filter-input-checkbox:focus + label {
-  color: var(--special-brown);
+.check-house-type {
+  color: var(--basic-white);
+  padding-left: 42px;
 }
 
-.filter input[type="text"] {
+.check__box {
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath fill='%23FFFFFF' d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  margin-left: -39px;
+}
+
+.check__box.check__box-ml {
+  margin-left: -42px;
+}
+
+.filter-input-checkbox:checked + .check__box {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath fill='%23FFFFFF' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%23FFFFFF' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E%0A");
+}
+
+/* Стоимость в сутки */
+
+.priceperday-inputbox input[type="number"] {
+  color: var(--basic-white);
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  height: 33px;
+  padding: 0;
+}
+
+.priceperday-inputbox input:first-of-type {
+  width: 69px;
+}
+
+.priceperday-inputbox input:last-of-type {
+  width: 80px;
+}
+
+.priceperday-inputbox span:first-of-type {
+  color: var(--basic-white);
+  margin-left: 64px;
+}
+
+.priceperday-inputbox span:last-of-type {
+  color: var(--basic-white);
+  margin-left: 53px;
+}
+
+.priceperday-inputbox {
   border: 2px solid var(--basic-white);
   border-radius: 2px;
-  height: 36px;
+  background-image: url(../img/input-line.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Range-filter */
+
+.range-controls {
+  position: relative;
+}
+
+.range-filter {
+  width: 316px;
+  margin-top: 20px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--scale-whiteopacity);
+}
+
+.range-controls .bar {
+  width: 83%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--toogle-grey);
+  border-radius: 50%;
+  box-shadow: 0 2px 0 0 var(--toogle-boxshadow);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 0px;
+}
+
+.range-controls .toggle-max {
+  left: 252px;
 }
 
 .filter-button {
@@ -808,8 +905,8 @@ img {
   width: 137px;
   height: 36px;
   display: block;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 33px;
+  margin-left: 84px;
   cursor: pointer;
 }
 
@@ -822,8 +919,8 @@ img {
 
 .filters-caption {
   border-bottom: 1px solid var(--basic-othergrey);
-  height: 86px;
-  padding: 29px 72px 31px;
+  height: 87px;
+  padding: 30px 73px 31px;
   display: grid;
   grid-template-columns: 135px 1fr 1fr;
 }
@@ -842,7 +939,8 @@ img {
   line-height: 18px;
   margin: 0;
   padding: 0;
-  padding-left: 29px;
+  padding-left: 28px;
+  padding-top: 1px;
 }
 
 .filters-caption a {
@@ -878,15 +976,15 @@ img {
 }
 
 .filter-caption-title {
-  padding-right: 40px;
+  padding-right: 37px;
 }
 
 .filters-caption-price {
-  padding-right: 32px;
+  padding-right: 29px;
 }
 
 .filters-caption-type {
-  padding-right: 33px;
+  padding-right: 30px;
 }
 
 .icon-up,
@@ -895,7 +993,15 @@ img {
 }
 
 .icon-up {
-  margin-right: 12px;
+  position: absolute;
+  right: 23px;
+  top: 10px;
+}
+
+.icon-down {
+  position: absolute;
+  right: 0px;
+  top: 10px;
 }
 
 .icon-up path {
@@ -916,15 +1022,16 @@ img {
 
 .filters-caption div {
   justify-self: end;
+  position: relative;
 }
 
 /* Filters result */
 
 .filters-result {
   border-bottom: 1px solid var(--basic-othergrey);
-  padding: 23.5px 72px 30px;
+  padding: 30px 72px 30px;
   display: grid;
-  grid-template-columns: 164px 1fr 1fr;
+  grid-template-columns: 165px 1fr 1fr;
 }
 
 .filter-result-content {
@@ -940,6 +1047,7 @@ img {
   line-height: 26px;
   color: var(--basic-black);
   grid-column: 1 / -1;
+  margin-top: -5px;
 }
 
 .filters-result a.hotel-name:hover {
@@ -951,10 +1059,15 @@ img {
   opacity: 0.3;
 }
 
+.filters-result img {
+  margin-left: 1px;
+}
+
 .filters-result p {
   color: var(--basic-darkgrey);
   padding: 0;
   margin: 0;
+  margin-top: -1px;
 }
 
 .button-more {
@@ -1012,4 +1125,9 @@ img {
 
 .stars {
   justify-self: end;
+  margin-top: -1px;
+}
+
+.stars img {
+  margin-left: 6px;
 }
