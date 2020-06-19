@@ -1048,6 +1048,7 @@ img {
   color: var(--basic-black);
   grid-column: 1 / -1;
   margin-top: -5px;
+  width: fit-content;
 }
 
 .filters-result a.hotel-name:hover {
