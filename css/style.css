@@ -633,7 +633,7 @@ img {
 
 .button:active {
   background-color: var(--special-otherblue);
-  color: var(--special-filter);
+  color: var(--scale-whiteopacity);
 }
 
 /* Footer */
@@ -1097,7 +1097,7 @@ img {
 
 .button-more:active {
   background-color: var(--special-otherblue);
-  color: var(--special-filter);
+  color: var(--scale-whiteopacity);
 }
 
 .button-reserve:hover {
@@ -1106,7 +1106,7 @@ img {
 
 .button-reserve:active {
   background-color: var(--special-otherbrown);
-  color: var(--special-filter);
+  color: var(--scale-whiteopacity);
 }
 
 .hotel-rating {
