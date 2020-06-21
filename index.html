@@ -40,9 +40,7 @@
     <!-- Main -->
     <main>
       <section class="hero">
-        <div class="hero-img">
-          <h1 class="visually-hidden">Sedona</h1>
-        </div>
+        <h1 class="visually-hidden">Sedona</h1>
       </section>
       <section class="main-caption">
         <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -192,11 +190,8 @@
               <p>
                 <label class="label-adults" for="label-adults"
                   >Взрослые:
-                  <a
-                    class="label-button adults-minus"
-                    href=""
-                    aria-label="Кнопка"
-                    >Взрослые минус<svg
+                  <button class="label-button adults-minus" aria-label="Кнопка">
+                    Взрослые минус<svg
                       class="svg-minus"
                       width="12"
                       height="3"
@@ -205,7 +200,7 @@
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <rect width="12" height="3" fill="#A9A9A9" />
-                    </svg> </a
+                    </svg></button
                   ><input
                     class="label-adults--number"
                     type="number"
@@ -213,11 +208,11 @@
                     id="label-adults"
                     min="1"
                     value="2"
-                  /><a
+                  /><button
                     class="label-button adults-plus"
-                    href=""
                     aria-label="Кнопка"
-                    >Взрослые плюс
+                  >
+                    Взрослые плюс
                     <svg
                       class="svg-plus"
                       width="11"
@@ -233,15 +228,15 @@
                         fill="#A9A9A9"
                       />
                     </svg>
-                  </a>
+                  </button>
                 </label>
                 <label class="label-children" for="label-children"
                   >Дети:
-                  <a
+                  <button
                     class="label-button children-minus"
-                    href=""
                     aria-label="Кнопка"
-                    >Дети плюс
+                  >
+                    Дети плюс
                     <svg
                       class="svg-minus"
                       width="12"
@@ -251,7 +246,7 @@
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <rect width="12" height="3" fill="#A9A9A9" />
-                    </svg> </a
+                    </svg></button
                   ><input
                     class="label-children--number"
                     type="number"
@@ -259,11 +254,11 @@
                     id="label-children"
                     min="0"
                     value="0"
-                  /><a
+                  /><button
                     class="label-button children-plus"
-                    href=""
                     aria-label="Кнопка"
-                    >Дети плюс
+                  >
+                    Дети плюс
                     <svg
                       class="svg-plus"
                       width="11"
@@ -279,7 +274,7 @@
                         fill="#A9A9A9"
                       />
                     </svg>
-                  </a>
+                  </button>
                 </label>
               </p>
               <button class="button" type="submit" aria-label="Кнопка">

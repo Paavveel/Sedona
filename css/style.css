@@ -53,6 +53,7 @@ img {
 
 .page {
   height: 100%;
+  background-color: var(--basic-bggrey);
 }
 
 .page-body {
@@ -60,6 +61,8 @@ img {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  background-color: var(--basic-white);
 }
 
 .visually-hidden {
@@ -147,15 +150,17 @@ img {
 
 .hero {
   background-image: url(../img/backgroundphoto.jpg);
-
   height: 509px;
 }
 
-.hero-img {
+.hero::after {
+  content: " ";
   background-image: url(../img/welcome.png);
-  background-position: center center;
+  background-position: center 76px;
   background-repeat: no-repeat;
-  height: 504px;
+  height: 509px;
+  width: 1200px;
+  display: inline-block;
 }
 
 .main-caption {
@@ -363,6 +368,7 @@ img {
   display: flex;
   padding-top: 48px;
   padding-bottom: 54px;
+  flex-wrap: wrap;
 }
 
 .main-description-item h3 {
@@ -549,6 +555,7 @@ img {
   height: 38px;
   background-color: var(--basic-bggrey);
   font-size: 0;
+  border: none;
   position: absolute;
 }
 
@@ -756,8 +763,8 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--basic-brown);
-  height: 217px;
-  padding: 26px 72px 32px;
+  min-height: 217px;
+  padding: 26px 72px 0;
 }
 
 .filter {
@@ -886,6 +893,13 @@ img {
   border-radius: 50%;
   box-shadow: 0 2px 0 0 var(--toogle-boxshadow);
   cursor: pointer;
+}
+
+.range-controls .toggle.toggle-min:hover,
+.range-controls .toggle.toggle-max:hover {
+  width: 23px;
+  height: 23px;
+  border: 10px solid var(--basic-white);
 }
 
 .range-controls .toggle-min {
@@ -1036,9 +1050,9 @@ img {
 
 .filter-result-content {
   display: grid;
-  grid-template-columns: 110px 1fr;
-  grid-template-rows: 28px 1fr 27px;
-  column-gap: 6px;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: 1fr min-content min-content;
+  column-gap: 5px;
 }
 
 .filters-result a.hotel-name {
@@ -1049,6 +1063,7 @@ img {
   grid-column: 1 / -1;
   margin-top: -5px;
   width: fit-content;
+  height: min-content;
 }
 
 .filters-result a.hotel-name:hover {
@@ -1068,27 +1083,23 @@ img {
   color: var(--basic-darkgrey);
   padding: 0;
   margin: 0;
-  margin-top: -1px;
+  padding-bottom: 15px;
 }
 
 .button-more {
   color: var(--basic-white);
   font-weight: bold;
   background-color: var(--basic-blue);
-  width: 110px;
-  height: 27px;
-  text-align: center;
-  padding-top: 3px;
+  padding: 3px 17px;
+  width: fit-content;
 }
 
 .button-reserve {
   color: var(--basic-white);
   font-weight: bold;
   background-color: var(--basic-brown);
-  width: 142px;
-  height: 27px;
-  text-align: center;
-  padding-top: 3px;
+  padding: 3px 17px;
+  width: fit-content;
 }
 
 .button-more:hover {
