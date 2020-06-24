@@ -28,7 +28,9 @@ search.addEventListener("click", function (evt) {
 Form.addEventListener("submit", function (evt) {
   if (!dateIn.value || !dateOut.value) {
     evt.preventDefault();
-    searchShow.classList.add("search-body-error");
+    searchShow.classList.remove("search-error");
+    searchShow.offsetWidth = searchShow.offsetWidth;
+    searchShow.classList.add("search-error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("in", dateIn.value);

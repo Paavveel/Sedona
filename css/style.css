@@ -19,6 +19,7 @@
   --toogle-grey: #ababab;
   --toogle-boxshadow: rgba(171, 171, 171, 0.3);
   --scale-whiteopacity: rgba(255, 255, 255, 0.3);
+  --footer-bg: rgba(255, 255, 255, 0.9);
 }
 
 *,
@@ -149,7 +150,7 @@ img {
 
 /* Hero */
 
-main::after {
+.page-main::after {
   content: "";
   background-image: url(../img/backgroundphoto.jpg);
   height: 509px;
@@ -161,7 +162,7 @@ main::after {
   top: 56px;
 }
 
-main::before {
+.page-main::before {
   content: " ";
   background-image: url(../img/welcome.png);
   background-position: center 76px;
@@ -444,10 +445,8 @@ main::before {
   margin: 0;
 }
 
-.map {
-  background-image: url(../img/map.png);
-  margin-top: -395px;
-  height: 593px;
+.newmap {
+  border: none;
 }
 
 /* Search */
@@ -458,7 +457,7 @@ main::before {
 
 .search {
   width: 568px;
-  height: 481px;
+
   position: relative;
   margin-left: -67px;
   margin-top: 44px;
@@ -493,11 +492,10 @@ main::before {
   font-weight: bold;
   line-height: 26px;
   padding: 55px;
-  height: 395px;
   background-color: var(--basic-white);
-}
-
-.search-body-hide {
+  width: 568px;
+  height: 395px;
+  position: absolute;
   display: none;
 }
 
@@ -506,7 +504,7 @@ main::before {
   animation: bounce 0.6s;
 }
 
-.search-body-error {
+.search-error {
   animation: shake 0.6s;
 }
 
@@ -739,11 +737,11 @@ main::before {
 /* Footer */
 
 .main-footer {
-  background: rgba(255, 255, 255, 0.9);
+  background-color: var(--footer-bg);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   height: 120px;
-  margin-top: -120px;
+  margin-top: -126px;
   z-index: 1;
 }
 
