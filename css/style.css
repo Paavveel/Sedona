@@ -496,12 +496,15 @@ img {
   width: 568px;
   height: 395px;
   position: absolute;
-  display: none;
 }
 
 .search-body-show {
   display: block;
   animation: bounce 0.6s;
+}
+
+.search-body-hide {
+  display: none;
 }
 
 .search-error {

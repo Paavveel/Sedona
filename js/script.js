@@ -12,10 +12,15 @@ try {
 } catch (err) {
   isStorageSupport = false;
 }
-
+/*
 search.addEventListener("click", function (evt) {
   evt.preventDefault();
   searchShow.classList.add("search-body-show");
+*/
+search.onclick = function () {
+  searchShow.classList.toggle("search-body-hide");
+  searchShow.classList.toggle("search-body-show");
+  searchShow.classList.remove("search-error");
 
   if (storage) {
     dateIn.value = storage;
@@ -23,7 +28,7 @@ search.addEventListener("click", function (evt) {
   } else {
     dateOut.value.focus();
   }
-});
+};
 
 Form.addEventListener("submit", function (evt) {
   if (!dateIn.value || !dateOut.value) {
