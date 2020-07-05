@@ -12,11 +12,9 @@ try {
 } catch (err) {
   isStorageSupport = false;
 }
-/*
-search.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  searchShow.classList.add("search-body-show");
-*/
+
+searchShow.classList.add("search-body-hide");
+
 search.onclick = function () {
   searchShow.classList.toggle("search-body-hide");
   searchShow.classList.toggle("search-body-show");
