@@ -209,6 +209,7 @@ img {
 
 .first-description {
   display: flex;
+  background-color: var(--basic-blue);
 }
 
 .first-description div:nth-child(2) {
@@ -220,6 +221,7 @@ img {
   background-color: var(--basic-blue);
   text-align: center;
   flex-grow: 1;
+  padding-bottom: 30px;
 }
 
 .first-side-description h3 {
@@ -355,6 +357,7 @@ img {
 
 .second-description {
   display: flex;
+  background-color: var(--basic-blue);
 }
 
 .second-description div:first-child {
@@ -452,15 +455,15 @@ img {
 
 .newmap {
   border: none;
+  background-image: url(../img/map.png);
+  background-repeat: no-repeat;
 }
 
 /* Search */
 
 .targetmap {
   position: relative;
-  background-image: url(../img/map.png);
-  background-position-y: 291px;
-  background-repeat: no-repeat;
+
 }
 
 .search {
